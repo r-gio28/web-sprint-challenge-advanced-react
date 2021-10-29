@@ -89,8 +89,25 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What are the main differences between a stateful and a functional component?
 
+Functional Components: accept data and display them. Mainly responsible for rendering UI. It accepts props as an argument and returns a React component. React lifecycle methods (for example, componentDidMount) cannot be used in functional components.
+
+Class Components: A class component requires you to extend from React. Class components are Stateful components because they can implement logic and state. Class components can use lifecycle methods. They can create a render function which returns a React element. 
+
 2. When does a componentWillMount function be called? What about a componentWillUpdate?
+
+componentWillMount triggers before the initial render, and the function will only trigger once in the lifespan of the component. It is used to update the state value before the DOM is rendered, creating a state variable. 
+
+componentWillUpdate is generally called before the component is updated or when the state or props passed to the component changes. This method is deprecated.
 
 3. Define stateful logic.
 
+Stateful logic is logic that is built into a component. It can be a function that handles a click event, a function that sets a toggle state, or a function that formats data before it gets displayed. This kind of logic deals with the state in the component.
+
 4. What are the three step of creating a successful test? What is done in each phase?
+
+Arrange:
+    Setup the React component we are testing. 
+Act:
+    Execute our behavior(if there is one)
+Assert:
+    Extract the response element and check (if necessary) that it is what we expect it to be. 
